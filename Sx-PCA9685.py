@@ -1,3 +1,5 @@
+# comprovació correspondència dels pins S de la placa Robot_bit amb els canals del PCA9685 intern
+
 from microbit import *
 # from microbit import i2c, sleep
 
@@ -36,4 +38,5 @@ for channel in range(16):
     set_servo_angle(channel, 90)
     sleep(1000)
     set_servo_angle(channel, 180)
+
     sleep(1000)
