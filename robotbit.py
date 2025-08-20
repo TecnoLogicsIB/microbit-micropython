@@ -1,4 +1,4 @@
-# robotbit.py — micro:bit + Robot:bit (PCA9685)
+# robotbit.py — micro:bit + robot:bit (PCA9685)
 # Ús unificat a 50 Hz per a: SERVOS, LEDS (source) i MOTORS (velocitat)
 
 from microbit import i2c, sleep  # I2C i pausa
@@ -154,4 +154,5 @@ def atura_motor(m):
 def atura_tots():
     for m in (1, 2, 3, 4):
         atura_motor(m)
+
 
