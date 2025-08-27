@@ -1,4 +1,4 @@
-# oled.py
+# oled.pys
 # Original from https://github.com/fizban99/microbit_ssd1306
 
 from microbit import i2c, Image
