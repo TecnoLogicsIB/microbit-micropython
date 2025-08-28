@@ -1,3 +1,6 @@
+# control de servos amb el PCA9685 de la placa robot:bit
+# desfasada per el mòdul robotbit, que permet controlar també LEDs i motors CC
+
 from microbit import i2c, sleep  # Importem comunicació I2C i funció de pausa
 
 ADR = 0x40  # Adreça del xip PCA9685 per controlar servos
@@ -53,3 +56,4 @@ def mou_servo_suau(p, a_fi, v=10):
     for a in range(a_ini, a_fi + pas, pas):  # Recorrem els angles un a un
         mou_servo(p, a)                              # Movem el servo a l’angle actual
         sleep(v)                                           # Esperem uns mil·lisegons per suavitzar el moviment
+
