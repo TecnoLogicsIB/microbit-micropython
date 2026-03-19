@@ -10,6 +10,7 @@ caracters = 4     # num de caràcters a la llista que conté el pin correcte
 intents = 0
 estat_porta = 'tancada'
 incidence = False
+usuari = 5
 
 radio.config(group=67)
 radio.on
@@ -59,13 +60,13 @@ def bloqueja():
     music.pitch (820, 200)
     if not incidence:
         radio.on()
-        radio.send("SOS:" + str(5))
+        radio.send("SOS:" + str(usuari))
         incidence =True
 
 def desbloqueja():
     global intents, incidence
     msg = radio.receive()
-    if msg and msg == "UNLOCK" + str(5):
+    if msg and msg == "UNLOCK" + str(usuari):
         # reinicia el sistema:
         radio.off()
         intents = 0
